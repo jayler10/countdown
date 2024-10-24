@@ -1,4 +1,7 @@
 # React + Vite
+un contador de tiempo hecho con react-vite 
+
+![image](https://github.com/user-attachments/assets/b6adac64-190b-42f6-bdb8-851298fe4312)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
