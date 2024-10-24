@@ -1,0 +1,118 @@
+body {
+  background-color: rgba(0, 0, 139, 0.5); /* Azul oscuro transparente */
+  color: #1a0404;
+  font-size: 2vw;/* Ajusta el tamaño de fuente con unidades responsivas */
+}
+
+.container {
+  display: flex;
+  gap: 1em; /* Espacio entre segmentos */
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas si es necesario */
+}
+
+.container-segment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+  align-items: center;
+  flex: 1 1 120px; /* Permite que cada segmento crezca y se reduzca */
+  min-width: 100px; /* Anchura mínima para cada segmento */
+  max-width: 150px; /* Anchura máxima para cada segmento */
+}
+.segment-title {
+  font-size: 0rem;
+  color: #131010; /* Color del título */
+  text-align: center; /* Centrar texto */
+  margin-top: 0.0em; /* Espacio superior */
+  font-family: "Agdasima", sans-serif;
+}
+
+.flip-card {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .2);
+  border-radius: .1em;
+  width: 100%; /* Ancho completo para que ocupe todo el espacio disponible */
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold; /* Grosor del texto */ /* Fondo oscuro y transparente */
+}
+
+.top,
+.bottom,
+.flip-card .top-flip,
+.flip-card .bottom-flip {
+  height: 1em; /* Ajustar altura */
+  line-height: 1;
+  padding: .25em;
+  overflow: hidden;
+}
+
+.top,
+.flip-card .top-flip {
+  background-color: rgba(28, 36, 138, 0.7); /* Fondo oscuro y transparente */
+  border-top-right-radius: .1em;
+  border-top-left-radius: .1em;
+  color: #201e1e; /* Color del texto */
+  text-align: center; /* Alineación central */
+}
+
+.bottom,
+.flip-card .bottom-flip {
+  background-color: rgba(48, 45, 214, 0.7); /* Fondo oscuro y transparente */
+  display: flex;
+  align-items: flex-end;
+  border-bottom-right-radius: .1em;
+  border-bottom-left-radius: .1em;
+  color: #1a1919; /* Color del texto */
+  text-align: center; /* Alineación central */
+}
+
+
+
+.flip-card .top-flip {
+  position: absolute;
+  width: 100%;
+  animation: flip-top 250ms ease-in;
+  transform-origin: bottom;
+}
+
+@keyframes flip-top {
+  100% {
+    transform: rotateX(90deg);
+  }
+}
+
+.flip-card .bottom-flip {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  animation: flip-bottom 250ms ease-out 250ms;
+  transform-origin: top;
+  transform: rotateX(90deg);
+}
+
+@keyframes flip-bottom {
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+
+.container {
+  display: flex;
+  gap: 0; /* Eliminar el espacio entre segmentos y los dos puntos */
+  justify-content: center;
+  
+  align-items: center; /* Asegura que los items estén centrados verticalmente */
+}
+
+.colon {
+  font-size: 1.6rem; /* Ajusta el tamaño del punto */
+  display: inline-flex; /* Usa inline-flex para centrar */
+  align-items: center; /* Asegura la alineación vertical */
+  margin: 0em; /* Ajusta el margen según sea necesario */
+  margin-right: 0px;
+  color: #121213;
+}
